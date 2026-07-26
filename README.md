@@ -1,6 +1,6 @@
 # **PBpool - Installation and Usage Guide**
 
-## **📋 Table of Contents**
+## ** Table of Contents**
 1. [Requirements](#-requirements)
 2. [Installation](#-installation)
 3. [Configuration](#-configuration)
@@ -9,7 +9,7 @@
 6. [Monitoring](#-monitoring)
 7. [Troubleshooting](#-troubleshooting)
 
-## **⚙️ Requirements**
+## ** Requirements**
 
 ### **System Requirements**
 - Linux/Windows server (2GB RAM minimum)
@@ -27,7 +27,7 @@ The following packages will be automatically installed:
 | `requests` | HTTP client for API calls |
 | `hashlib` | Cryptographic hashing (built-in) |
 
-## **📥 Installation**
+## ** Installation**
 
 ### **1. Clone the Repository**
 ```bash
@@ -55,7 +55,7 @@ pip install -r requirements.txt
    bitcoind -daemon
    ```
 
-## **⚙️ Configuration**
+## ** Configuration**
 
 Edit `config.json` with your preferred settings:
 
@@ -76,7 +76,7 @@ Edit `config.json` with your preferred settings:
 }
 ```
 
-## **🚀 Running the Pool**
+## ** Running the Pool**
 
 Start the mining pool server:
 ```bash
@@ -89,7 +89,7 @@ The pool will start on port 3333 by default. For production use, consider runnin
 nohup python main.py > pool.log 2>&1 &
 ```
 
-## **⛏️ Connecting Miners**
+## ** Connecting Miners**
 
 ### **For ASIC Miners**
 Configure your miner with these settings:
@@ -151,7 +151,7 @@ curl http://localhost:3333/stats/yourminingaddress?password=Support_HCMLXOX
 
 ---
 
-## **📊 Monitoring**
+## ** Monitoring**
 
 ### **Check Pool Status**
 ```bash
@@ -163,7 +163,7 @@ curl http://localhost:3333/stats/YOUR_BITCOIN_ADDRESS?password=Support_HCMLXOX
 tail -f pool.log
 ```
 
-## **🔧 Troubleshooting**
+## ** Troubleshooting**
 
 ### **Common Issues**
 
@@ -186,26 +186,26 @@ The pool automatically maintains backups of miner data in `miners.json.bak`. To 
 cp miners.json.bak miners.json
 ```
 
-## **📈 Performance Tips**
+## ** Performance Tips**
 
 - For high hashrate setups, consider increasing the difficulty in `config.json`
 - Run Bitcoin Core on a separate machine for better performance
 - Use a reverse proxy (Nginx) if exposing the pool to the internet
 
-## **🛡️ Security Recommendations**
+## ** Security Recommendations**
 
 1. Change the default password in `config.json`
 2. Use HTTPS if exposing the pool publicly
 3. Regularly backup the `miners.json` file
 4. Monitor server resources (CPU/RAM usage)
 
-## **📚 Additional Resources**
+## ** Additional Resources**
 
 - [Bitcoin Core Documentation](https://bitcoincore.org/en/doc/)
 - [Stratum Mining Protocol](https://en.bitcoin.it/wiki/Stratum_mining_protocol)
 - [Python Flask Documentation](https://flask.palletsprojects.com/)
 
-**Happy Mining!** ⛏️💰
+**Happy Mining!** 
 
 ## Donations
 
